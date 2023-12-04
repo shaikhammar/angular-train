@@ -7,11 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  toggleParagraph = false;
-  clickArray = []
-  
-  buttonClick(){
-    this.toggleParagraph = !this.toggleParagraph
-    this.clickArray.push(this.clickArray.length + 1)
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }

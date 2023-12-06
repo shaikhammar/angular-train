@@ -4,20 +4,20 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+            <a class="nav-link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+            <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
           </li>
         </ul>
         <ul class="navbar-nav justify-content-end">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" appDropdown #dropdownRef="appDropdown">
+              <a class="nav-link dropdown-toggle" role="button" appDropdown #dropdownRef="appDropdown" style="cursor: pointer;">
                 Manage
               </a>
               <ul class="dropdown-menu" [ngClass]="{'show': dropdownRef.isOpen}">
-                <li><a href="#" class="dropdown-item">Save Data</a></li>
-                <li><a href="#" class="dropdown-item">Fetch Data</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;">Save Data</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;">Fetch Data</a></li>
               </ul>
             </li>
           </ul>
